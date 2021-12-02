@@ -1,4 +1,4 @@
-## This site is published at https://tuanpnuet.github.io/beautifulhanoi/
+## This site is published at https://tuanpnuet.github.io/beautiful-hanoi/
 
 ## 課題-11月
 ### このサイトはハノイの美しさを紹介しています。観光地や名物料理やお祭りや交通など。。 を紹介しています。
