@@ -7,9 +7,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.center: {
+.myTab {
+	width: 14%; 
 	justify-content: center;
- 	text-align: center;
+	text-decoration: unset;
+}
+.center {
+	justify-content: center;
+	align-items:center;
+ 	text-align:center;
+	vertical-align: middle;
 }
 .iframe{
   /*width: 100vw;*/
@@ -188,3 +195,4 @@
 	.image{
 		margin-left: 2px;margin-right: 2px;
 	}
+}
