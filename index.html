@@ -5,17 +5,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
+	<button onclick="topFunction()" id="topBtn">トップ</button>
 	<div>
 		<header>
-			<div style="position: relative; color: white; font-size: 6vw;"> 
-				<img src="images/logo.png" class="logo" width="100%" height="60%">
-				<div class="centered"><p>美しいハノイ</p></div>
+			<div id="banner">
+				<div class="title">
+					<div class="title-inner">
+						<div class="adj">
+							<div class="adj-inner">美しい</div>
+						</div>
+						<div class="hanoi">
+							<div class="hanoi-inner">ハノイ</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="image">
+					<img src='images/logo.png' alt=''>
+				</div>
 			</div>
 			<div class="bg_menu">
 				<a style="text-decoration: unset;" class="type5 hov myTab" href="index.html">ホーム</a>
@@ -28,7 +41,7 @@
 		<br><br>
 		<div style="align-items: center; text-align: center;">
 			<div class="container">
-				<iframe class="col-md-12 col-xs-12 iframe" src="https://www.youtube.com/embed/74dgLjjXABk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+				<iframe class="col-md-12 col-xs-12 iframe" src="https://www.youtube.com/embed/74dgLjjXABk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  controls autoplay></iframe><br><br>
 				<span class="type6"><b>ベトナムの首都ハノイ</b></span><br>
 				<span class="type8">ベトナムの首都ハノイは、商業の中心地ホーチミンに次ぐベトナム第2の大都市。歴史や文化を大切に守ってきた街並みは、どこかノスタルジックで訪れる人を惹きつけてやみません。</span>
 				<br>
@@ -54,7 +67,7 @@
 					</ol>
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="images/img_thaprua.png" style="width:100%; height: 30vw">
+							<img src="images/img_thaprua.png" style="width:100%; height: 30vw" onClick="window.open(this.src)">
 						</div>
 
 						<div class="item">
@@ -183,8 +196,8 @@
 					<span class="type7"><b>バッチャンのお祭り</b></span><br><br>
 					<span class="type8">
 						祭りでは、伝統的な陶器村の技術と芸術性をたたえて、職人らが作ったバッチャン陶器の作品150点が展示された。
-                        また、今回はシルクで有名なバンフック村のほか、フンサの織物村、サキエウの線香村、ダシの鍛造村、春雨作りが有名なクダ村、アンズオン（ハイフォン）の刺しゅう村などが参加した。
-                        それぞれの作品が提供されたほか、各地の独特の音楽や舞踊なども披露され、各村が手工芸と観光の両面をアピールした。
+						また、今回はシルクで有名なバンフック村のほか、フンサの織物村、サキエウの線香村、ダシの鍛造村、春雨作りが有名なクダ村、アンズオン（ハイフォン）の刺しゅう村などが参加した。
+						それぞれの作品が提供されたほか、各地の独特の音楽や舞踊なども披露され、各村が手工芸と観光の両面をアピールした。
 					</span><br><br>
 					<a href="festival.html" class="type9">もっと見る</a>
 				</span>	
@@ -213,5 +226,21 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+		var mybutton = document.getElementById("topBtn");
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
 </body>
 </html>

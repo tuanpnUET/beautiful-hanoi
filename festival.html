@@ -11,11 +11,28 @@
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
+	<button onclick="topFunction()" id="topBtn">トップ</button>
 	<div>
 		<header>
-			<div style="position: relative; color: white; font-size: 6vw;"> 
+			<!-- <div style="position: relative; color: white; font-size: 6vw;"> 
 				<img src="images/logo.png" class="logo" width="100%" height="60%">
 				<div class="centered"><p>美しいハノイ</p></div>
+			</div> -->
+			<div id="banner">
+				<div class="title">
+					<div class="title-inner">
+						<div class="adj">
+							<div class="adj-inner">美しい</div>
+						</div>
+						<div class="hanoi">
+							<div class="hanoi-inner">ハノイ</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="image">
+					<img src='images/logo.png' alt=''>
+				</div>
 			</div>
 			<div class="bg_menu">
 				<a style="text-decoration: unset;" class="type5 hov myTab" href="index.html">ホーム</a>
@@ -32,13 +49,14 @@
 				<br><br>
 			</div>
 			<div class="container" style="margin-top: 2px;">	
-				<span class="col-md-4 col-xs-12 center">
+				<span class="col-md-4 col-xs-12">
 					<span class="type7"><b>バッチャンのお祭り</b></span><br><br>
 					<span class="type8">
 						祭りでは、伝統的な陶器村の技術と芸術性をたたえて、職人らが作ったバッチャン陶器の作品150点が展示された。
                         また、今回はシルクで有名なバンフック村のほか、フンサの織物村、サキエウの線香村、ダシの鍛造村、春雨作りが有名なクダ村、アンズオン（ハイフォン）の刺しゅう村などが参加した。
                         それぞれの作品が提供されたほか、各地の独特の音楽や舞踊なども披露され、各村が手工芸と観光の両面をアピールした。
 					</span><br><br>
+					<span class="type8"><b>開催時間:</b>2月15日~2月20日</span><br><br>
 				</span>
 				<span class="col-md-1"></span>
 				<div id="battrang" class="col-md-7 col-xs-12 carousel slide" data-ride="carousel">
@@ -97,22 +115,24 @@
 					</a>
 				</div>
 				<span class="col-md-1"></span>
-				<span class="col-md-4 col-xs-12 center">
+				<span class="col-md-4 col-xs-12 ">
 					<span class="type7"><b>チエウクック村の祭り</b></span><br><br>
 					<span class="type8">
 						毎年、旧暦の１月９日から１２日まで、チエウクック村で祭りが行われる。今年、多くの伝統的な文化活動は多くの人々を集めた。
                         チエウクック村の祭りは昔からの伝統を継承保存している。多くの儀礼の他、北部の村の文化の特徴を有する獅子踊り、レスリングなども行われた。
                         特に、２０１０年の１０００年大記念祭において行われた｢昔を見つけるタンロン祭り｣のプログラムにおいて紹介された１０の古い踊りの中の２つである｢リー・ライン・ボン｣の踊りと｢ムア・チャイ・コ｣の踊りがあった。
 					</span><br><br>
+					<span class="type8"><b>開催時間:</b>旧暦の１月９日~１２日</span><br><br>
 				</span>
 			</div>
 			<br><br>
 			<div class="container">
-                <span class="col-md-4 col-xs-12 center">
+                <span class="col-md-4 col-xs-12">
 					<span class="type7"><b>ハノイ日本桜祭り。</b></span><br><br>
 					<span class="type8">
 						祭り期間中、よさこいチャンピオンシップや飲食ブース、日本文化紹介コーナーが出展し、多くの人々が日越文化交流を楽しみました。
 					</span><br><br>
+					<span class="type8"><b>開催時間:</b>3月27日~3月29日</span><br><br>
 				</span>
                 <span class="col-md-1"></span>
 				<div id="hoaanhdao" class="col-md-7 col-xs-12 carousel slide" data-ride="carousel">
@@ -166,5 +186,21 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+	var mybutton = document.getElementById("topBtn");
+	window.onscroll = function() {scrollFunction()};
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
 </body>
 </html>

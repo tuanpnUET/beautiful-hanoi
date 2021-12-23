@@ -11,11 +11,24 @@
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
+	<button onclick="topFunction()" id="topBtn">トップ</button>
 	<div>
 		<header>
-			<div style="position: relative; color: white; font-size: 6vw;"> 
-				<img src="images/logo.png" class="logo" width="100%" height="60%">
-				<div class="centered"><p>美しいハノイ</p></div>
+			<div id="banner">
+				<div class="title">
+					<div class="title-inner">
+						<div class="adj">
+							<div class="adj-inner">美しい</div>
+						</div>
+						<div class="hanoi">
+							<div class="hanoi-inner">ハノイ</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="image">
+					<img src='images/logo.png' alt=''>
+				</div>
 			</div>
 			<div class="bg_menu">
 				<a style="text-decoration: unset;" class="type5 hov myTab" href="index.html">ホーム</a>
@@ -29,11 +42,13 @@
 		<div>
 			<div class="container" style="margin-top: 2px;">	
 				<span class="type6"><b>ハノイの交通</b></span><br><br>
-				<span class="col-md-4 col-xs-12 center">
+				<span class="col-md-4 col-xs-12">
 					<span class="type7"><b>シクロ</b></span><br><br>
 					<span class="type8">
 						以前はベトナム庶民の一般的な交通手段でしたが、現在はあまり使われなくなってきています。あくまで風情を味わう観光の一つと考えるのが良いでしょう。
 					</span><br><br>
+					<span class="type8"><b>料金: </b> 時間350円〜500円</span><br><br>
+					<span class="type8">※利用前に料金・時間・行き先の確認をおすすめします。</span><br>
 				</span>
 				<span class="col-md-1"></span>
 				<div id="xichlo" class="col-md-7 col-xs-12 carousel slide" data-ride="carousel">
@@ -92,20 +107,24 @@
 					</a>
 				</div>
 				<span class="col-md-1"></span>
-				<span class="col-md-4 col-xs-12 center">
+				<span class="col-md-4 col-xs-12">
 					<span class="type7"><b>タクシー</b></span><br><br>
 					<span class="type8">
 						うまく活用すれば、市内に点在する観光スポットを効率良くまわれる。ハノイ市内には多数のタクシー会社があり、車種もさまざまだが、メーター制のセダンタイプが一般的。
 					</span><br><br>
+					<span class="type8"><b>料金: </b> 75円〜100円/1km</span><br><br>
+					<span class="type8">※タクシーの料金は基本的にメーターで決まります。空港からタクシーに乗る場合は、空港のタクシー乗り場にあらかじめ料金が書かれているので、乗る前にしっかりチェックしましょう。。</span><br>
 				</span>
 			</div>
 			<br><br>
 			<div class="container" style="margin-top: 2px;">	
-				<span class="col-md-4 col-xs-12 center">
+				<span class="col-md-4 col-xs-12">
 					<span class="type7"><b>バス</b></span><br><br>
 					<span class="type8">
 						運賃は格安ですが、上級者向け。ローカルな路線は旅慣れていない方にはあまりおすすめしませんが、 空港からハノイ駅（市内）へ向かう86番バス などは比較的わかりやすく利用しやすいので、 リピーターの方や荷物の少ない方は利用を検討 しても良いかもしれません。 また、ラオカイ、サパ、ハロン湾などへ向かう長距離バスの拠点となるミーディン・バスターミナルへ行くには、旧市街から34番バスに乗るのが便利です。
 					</span><br><br>
+					<span class="type8"><b>料金: </b> 35円〜45円/回</span><br><br>
+					<span class="type8">※ハノイでがっつりバスを使って観光したい方は「Tìm Buýt」というベトナムのアプリがおすすめです。</span><br>
 				</span>
 				<span class="col-md-1"></span>
 				<div class="container">
@@ -165,21 +184,24 @@
 					</a>
 				</div>
 				<span class="col-md-1"></span>
-				<span class="col-md-4 col-xs-12 center">
+				<span class="col-md-4 col-xs-12">
 					<span class="type7"><b>ハノイ都市鉄道</b></span><br><br>
 					<span class="type8">
 						開業したのは、首都ハノイ中心部にあるカットリン駅とイエンギア駅を結ぶおよそ13キロの路線です。
 						ベトナムで都市鉄道が開業するのはこれが初めてで、6日から15日間は運賃は無料になっていて、市民が早速乗車し、車窓から見える景色を楽しんでいました。
 					</span><br><br>
+					<span class="type8"><b>料金: </b> 40円～75円/回</span><br>
 				</span>
 			</div>
 			<br><br>
 			<div class="container" style="margin-top: 2px;">	
-				<span class="col-md-4 col-xs-12 center">
-					<span class="type7"><b>バイクタクシー</b></span><br><br>
+				<span class="col-md-4 col-xs-12">
+					<span class="type7"><b>バイクタクシー・セオム</b></span><br><br>
 					<span class="type8">
 						地元の人達が最も良く利用する乗り物。市内のいたるところで旅行者も声をかけられます。
 					</span><br><br>
+					<span class="type8"><b>料金: </b> 35円~40円/1km</span><br><br>
+					<span class="type8"><b>※</b> 近距離ならば圧倒的に車のタクシーよりも安く、何よりも速いので、うまく使いこなしたい乗り物です。</span><br>
 				</span>
 				<span class="col-md-1"></span>
 				<div id="xeom" class="col-md-7 col-xs-12 carousel slide" data-ride="carousel">
@@ -233,5 +255,21 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+	var mybutton = document.getElementById("topBtn");
+	window.onscroll = function() {scrollFunction()};
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
 </body>
 </html>
