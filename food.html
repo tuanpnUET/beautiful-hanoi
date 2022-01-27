@@ -8,27 +8,16 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/home.css">
+  	<script language="javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<button onclick="topFunction()" id="topBtn">トップ</button>
 	<div>
 		<header>
-			<div id="banner">
-				<div class="title">
-					<div class="title-inner">
-						<div class="adj">
-							<div class="adj-inner">美しい</div>
-						</div>
-						<div class="hanoi">
-							<div class="hanoi-inner">ハノイ</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="image">
-					<img src='images/logo.png' alt=''>
-				</div>
+			<div style="position: relative; color: white; font-size: 6vw;"> 
+				<img src="images/logo.png" class="logo" width="100%" height="60%">
+				<div class="centered"><p>美しいハノイ</p></div>
 			</div>
 			<div class="bg_menu">
 				<a style="text-decoration: unset;" class="type5 hov myTab" href="index.html">ホーム</a>
@@ -298,21 +287,41 @@
 			</div>
 		</footer>
 	</div>
-	<script>
-	var mybutton = document.getElementById("topBtn");
-	window.onscroll = function() {scrollFunction()};
-	function scrollFunction() {
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			mybutton.style.display = "block";
-		} else {
-			mybutton.style.display = "none";
-		}
-	}
+	<script type="text/javascript">
+		var items = document.querySelectorAll('.myTab');
+		
+        function handleIndicator(el) {
+            items.forEach(function (item) {
+                item.classList.remove('is-active');
+                item.removeAttribute('style');
+            });
+            indicator.style.width = "".concat(el.offsetWidth, "px");
+            indicator.style.left = "".concat(el.offsetLeft, "px");
+            indicator.style.backgroundColor = el.getAttribute('active-color');
+            el.classList.add('is-active');
+            el.style.color = el.getAttribute('active-color');
+        }
 
-	function topFunction() {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
+        items.forEach(function (item, index) {
+            item.addEventListener('click', function (e) {
+                handleIndicator(e.target);
+            });
+            item.classList.contains('is-active') && handleIndicator(item);
+        });
+		var mybutton = document.getElementById("topBtn");
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
 	</script>
 </body>
 </html>

@@ -8,27 +8,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<script language="javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<button onclick="topFunction()" id="topBtn">トップ</button>
 	<div>
 		<header>
-			<div id="banner">
-				<div class="title">
-					<div class="title-inner">
-						<div class="adj">
-							<div class="adj-inner">美しい</div>
-						</div>
-						<div class="hanoi">
-							<div class="hanoi-inner">ハノイ</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="image">
-					<img src='images/logo.png' alt=''>
-				</div>
+			<div style="position: relative; color: white; font-size: 6vw;"> 
+				<img src="images/logo.png" class="logo" width="100%" height="60%">
+				<div class="centered"><p>美しいハノイ</p></div>
 			</div>
 			<div class="bg_menu">
 				<a style="text-decoration: unset;" class="type5 hov myTab" href="index.html">ホーム</a>
@@ -261,45 +250,45 @@
 			</div>
 		</div>
 	</div>
-</div><br><hr>
-<footer class="container">
-	<div class="col-md-4 col-xs-12 bg type14" >
-		<img src="images/logo_hanoi.png" style="width: 100%; height: 100%;"><br><br><br>
-	</div>
-	<div class="col-md-4 col-xs-12 bg type15" >
-		<span style="font-size: 17px;"><b>サポート＆お問い合わせ</b></span><br><br>
-		<div>
-			<a href="#"><img src="images/ic_fb.png"></a>
-			<a href="#"><img src="images/ic_tw.png"></a>
-			<a href="#"><img src="images/ic_gg.png"></a>
+	</div><br><hr>
+	<footer class="container">
+		<div class="col-md-4 col-xs-12 bg type14" >
+			<img src="images/logo_hanoi.png" style="width: 100%; height: 100%;"><br><br><br>
 		</div>
+		<div class="col-md-4 col-xs-12 bg type15" >
+			<span style="font-size: 17px;"><b>サポート＆お問い合わせ</b></span><br><br>
+			<div>
+				<a href="#"><img src="images/ic_fb.png"></a>
+				<a href="#"><img src="images/ic_tw.png"></a>
+				<a href="#"><img src="images/ic_gg.png"></a>
+			</div>
+		</div>
+		<div class="col-md-4 col-xs-12 type16">
+			<span style="font-size: 17px;"><b><center>現住所</center></b></span>
+			<span style="font-size: 16px;font-family: Calibri;padding-top: 7px; padding-bottom: 7px;">20 Ho Tung Mau, Cau Giay District, Ha Noi</span><br>
+			<br>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3723.869840539301!2d105.77870663677062!3d21.037893389714146!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1637650623408!5m2!1svi!2s" class="col-md-12 col-xs-12" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+		<div class="lastbg">
+			<center>DESIGNED BY @TUANPN.TB NO COPY RIGHT</center>
+		</div>
+	</footer>
 	</div>
-	<div class="col-md-4 col-xs-12 type16">
-		<span style="font-size: 17px;"><b><center>現住所</center></b></span>
-		<span style="font-size: 16px;font-family: Calibri;padding-top: 7px; padding-bottom: 7px;">20 Ho Tung Mau, Cau Giay District, Ha Noi</span><br>
-		<br>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3723.869840539301!2d105.77870663677062!3d21.037893389714146!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1637650623408!5m2!1svi!2s" class="col-md-12 col-xs-12" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-	</div>
-	<div class="lastbg">
-		<center>DESIGNED BY @TUANPN.TB NO COPY RIGHT</center>
-	</div>
-</footer>
-</div>
-<script>
-	var mybutton = document.getElementById("topBtn");
-	window.onscroll = function() {scrollFunction()};
-	function scrollFunction() {
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			mybutton.style.display = "block";
-		} else {
-			mybutton.style.display = "none";
+	<script type="text/javascript">
+		var mybutton = document.getElementById("topBtn");
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
 		}
-	}
 
-	function topFunction() {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
-</script>
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
 </body>
 </html>
